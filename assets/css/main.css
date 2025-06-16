@@ -3219,3 +3219,15 @@ input, select, textarea {
 			}
 
 	}
+
+	/* Messages */
+	.success {
+    color: #28a745;
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+.error {
+    color: #dc3545;
+    font-weight: bold;
+    margin-bottom: 1em;
+}

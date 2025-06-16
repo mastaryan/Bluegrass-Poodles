@@ -7,31 +7,33 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Validate inputs
     if (empty($name) || empty($email) || empty($message)) {
-        echo "All fields are required.";
+        header("Location: index.html?status=error&message=All fields are required.");
         exit;
     }
 
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        echo "Invalid email format.";
+        header("Location: index.html?status=error&message=Invalid email format.");
         exit;
     }
 
     // Email settings
-    $to = "sizemore.ryan@gmail.com";
+    $to = "puppies@bluegrassdoodle.com";
     $subject = "Stud Service Request from $name";
     $body = "Name: $name\n";
     $body .= "Email: $email\n";
     $body .= "Message:\n$message\n";
-    $headers = "From: $email\r\n";
+    $headers = "From: noreply@bluegrassdoodle.com\r\n";
     $headers .= "Reply-To: $email\r\n";
+    $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
     // Send email
     if (mail($to, $subject, $body, $headers)) {
-        echo "Message sent successfully!";
+        header("Location: index.html?status=success");
     } else {
-        echo "Failed to send message. Please try again later.";
+        header("Location: index.html?status=error&message=Failed to send message. Please try again later.");
     }
 } else {
-    echo "Invalid request method.";
+    header("Location: index.html?status=error&message=Invalid request method.");
 }
+exit;
 ?>
