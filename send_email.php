@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Email settings
-    $to = "puppies@bluegrassdoodle.com";
+    $to = "sizemore.ryan@gmail.com";
     $subject = "Stud Service Request from $name";
     $body = "Name: $name\n";
     $body .= "Email: $email\n";
