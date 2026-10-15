@@ -39,18 +39,18 @@
 			<header class="major">
 				<h2>Bluegrass Poodles</h2>
 			</header>
-			<p>Miniature and Standard Poodles located in London, KY. All males are available for stud services.</p>
+			<p>Miniature and Standard Poodles located in London, KY. Our male is available for stud service.</p>
 		</section>
 
-		<!-- Two Males -->
+		<!-- Our stud -->
 		<section id="two">
-			<h2>Our Male Poodles</h2>
+			<h2>Our Male Poodle</h2>
 			<ul class="actions">
 				<li><a href="https://docs.google.com/forms/d/18h1wrWpSJpDUWlya0d1uthHjiBMyy9ttSC1w4cYWTro/edit"
 						class="button">Stud Service</a></li>
 			</ul>
 			<div class="row">
-				<article class="col-6 col-12-xsmall work-item">
+				<article class="col-12 col-12-xsmall work-item">
 					<a href="images/fulls/max_full.png" class="image fit thumb"><img src="images/thumbs/max_thumb.png" alt="" /></a>
 					<h3>Max</h3>
 					<p>ACA Miniature Poodle <br>Color highlights: EE,Bb, K<sup>y</sup>K<sup>y</sup>
@@ -58,36 +58,14 @@
 					<a href="#" class="button">Color Traits</a>
 					<a href="#" class="button">Health</a>
 				</article>
-				<article class="col-6 col-12-xsmall work-item">
-					<a href="images/fulls/cash.png" class="image fit thumb"><img src="images/thumbs/cash.png" alt="" /></a>
-					<h3>Cash</h3>
-					<p>AKC Mini Poodle <br>Color highlights: ee, Ssp, two copies of curly, and two copies of furnishings.</p>
-					<a href="https://my.embarkvet.com/dog/cash944?utm_campaign=cns_ref_dog_pub_profile&utm_medium=email&utm_source=embark#traits" class="button">Color Traits</a>
-					<a href="images/cash_health.pdf" class="button">Health</a>
-				</article>
 			</div>
 		</section>
 
 		<!-- Three -->
 		<section id="three">
-			<h2>Stud Service Request</h2>
-			<div id="messageDisplay"></div> <!-- Placeholder for success/error message -->
+			<h2>Contact</h2>
 			<div class="row">
-				<div class="col-8 col-12-small">
-					<form method="post" action="send_email.php">
-						<div class="row gtr-uniform gtr-50">
-							<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" required /></div>
-							<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" required /></div>
-							<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="4" required></textarea></div>
-							<div class="col-12">
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
-							</div>
-						</div>
-					</form>
-				</div>
-				<div class="col-4 col-12-small">
+				<div class="col-12">
 					<ul class="labeled-icons">
 						<li>
 							<h3 class="icon solid fa-home"><span class="label">Address</span></h3>
@@ -96,8 +74,8 @@
 							United States
 						</li>
 						<li>
-							<h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
-							<a href="#">puppies@bluegrassdoodle.com</a>
+							<h3 class="icon solid fa-phone"><span class="label">Phone</span></h3>
+							<a href="tel:+12026424575">(202) 642-4575</a><br />Text preferred, calls welcome
 						</li>
 					</ul>
 				</div>
@@ -111,7 +89,7 @@
 			<ul class="icons">
 				<li><a href="https://www.facebook.com/BluegrassDoodles" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
 				<li><a href="https://www.instagram.com/bluegrassdoodles/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-				<li><a href="mailto:puppies@bluegrassdoodle.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+				<li><a href="tel:+12026424575" class="icon solid fa-phone"><span class="label">Phone</span></a></li>
 			</ul>
 			<ul class="copyright">
 				<li>© 2025</li>
@@ -127,23 +105,5 @@
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
-	<script>
-		// JavaScript to display success/error message based on URL parameters
-		window.onload = function() {
-			const urlParams = new URLSearchParams(window.location.search);
-			const status = urlParams.get('status');
-			const message = urlParams.get('message');
-			const messageDisplay = document.getElementById('messageDisplay');
-
-			if (status === 'success') {
-				messageDisplay.innerHTML = '<p class="success">Message sent successfully!</p>';
-				// Clear URL parameters after displaying to avoid re-displaying on refresh
-				history.replaceState({}, document.title, window.location.pathname);
-			} else if (status === 'error' && message) {
-				messageDisplay.innerHTML = '<p class="error">' + message + '</p>';
-				history.replaceState({}, document.title, window.location.pathname);
-			}
-		};
-	</script>
 </body>
 </html>
